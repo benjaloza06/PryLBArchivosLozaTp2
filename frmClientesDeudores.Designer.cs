@@ -59,6 +59,7 @@
             this.LblDeuda.Name = "LblDeuda";
             this.LblDeuda.Size = new System.Drawing.Size(64, 23);
             this.LblDeuda.TabIndex = 12;
+            this.LblDeuda.Click += new System.EventHandler(this.LblDeuda_Click);
             // 
             // LblPromedioDeuda
             // 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.DgvClientes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblTotalDeuda = new System.Windows.Forms.Label();
             this.LblCantidadClientes = new System.Windows.Forms.Label();
             this.LblPromedioDeuda = new System.Windows.Forms.Label();
@@ -37,10 +41,7 @@
             this.LblPromedio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnReporte = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnOrdenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,27 @@
             this.DgvClientes.Name = "DgvClientes";
             this.DgvClientes.Size = new System.Drawing.Size(494, 307);
             this.DgvClientes.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre y Apellido";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Deuda";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Limite de Credito";
+            this.Column4.Name = "Column4";
             // 
             // LblTotalDeuda
             // 
@@ -111,9 +133,11 @@
             this.LblPromedio.Name = "LblPromedio";
             this.LblPromedio.Size = new System.Drawing.Size(71, 23);
             this.LblPromedio.TabIndex = 6;
+            this.LblPromedio.Click += new System.EventHandler(this.LblPromedio_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnOrdenar);
             this.groupBox1.Controls.Add(this.BtnReporte);
             this.groupBox1.Controls.Add(this.LblClientes);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,26 +160,15 @@
             this.BtnReporte.UseVisualStyleBackColor = true;
             this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
-            // Column1
+            // BtnOrdenar
             // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre y Apellido";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Deuda";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Limite de Credito";
-            this.Column4.Name = "Column4";
+            this.BtnOrdenar.Location = new System.Drawing.Point(27, 382);
+            this.BtnOrdenar.Name = "BtnOrdenar";
+            this.BtnOrdenar.Size = new System.Drawing.Size(90, 23);
+            this.BtnOrdenar.TabIndex = 7;
+            this.BtnOrdenar.Text = "Ordenar";
+            this.BtnOrdenar.UseVisualStyleBackColor = true;
+            this.BtnOrdenar.Click += new System.EventHandler(this.BtnOrdenar_Click);
             // 
             // frmListadoClientes
             // 
@@ -194,5 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button BtnOrdenar;
     }
 }

@@ -23,7 +23,7 @@ namespace PryLBArchivosLoza
             x.Listar(DgvClientes);
             LblClientes.Text = x.CantidadClientes().ToString();
             LblDeuda.Text = x.DuedaClientes().ToString();
-            //LblPromedio.Text = x.PromedioDeudas().ToString();
+            LblPromedio.Text = x.PromedioDeudas().ToString();
             //LblPromedio.Text = x.PromedioDeudas2().ToString();
         }
 
@@ -36,6 +36,19 @@ namespace PryLBArchivosLoza
         {
             x.GenerarReporte();
             MessageBox.Show("Reporte Generado Correctamente");
+        }
+
+        private void BtnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+            MessageBox.Show("Archivo Ordenado");
+            x.Listar(DgvClientes);
+
+        }
+
+        private void LblPromedio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

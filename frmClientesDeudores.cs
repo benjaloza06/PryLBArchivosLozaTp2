@@ -22,11 +22,17 @@ namespace PryLBArchivosLoza
         private void frmClientesDeudores_Load(object sender, EventArgs e)
         {
             x.ListarDeudores(DgvClientesDeudores);
+            LblDeuda.Text = x.DuedaClientes().ToString();
             LblClientes.Text = x.ClientesDeudores().ToString();
             LblPromedio.Text = x.PromedioDeuda().ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblDeuda_Click(object sender, EventArgs e)
         {
 
         }
